@@ -43,15 +43,22 @@ table {
 	border-spacing: 0;
 }
 
+@font-face {
+  font-family: fipps;
+  src: url(../Fipps-Regular.otf);
+}
+
 /* General */
 body {
 	margin: 0;
 	padding: 0;
-	background: #F5F5F5;
+	background: #FFFFFF;
 }
 
 .myName {
 	text-align: center;
+	font-size: 70%;
+	font-family: 'fipps', cursive;
 }
 
 .wrapper {
@@ -161,15 +168,17 @@ ul {
 }
 
 .leftNav {
-	font-size: 250%;
-	font-family: 'Pacifico', Arial;
+	font-size: 200%;
+	font-family: 'Segoe UI', Arial;
 	float: left;
-	margin-left: 20%;
+	margin-left: 21%;
+	margin-top: 1%;
 	overflow: visible;
 }
 
 .rightNav {
 	font-size: 130%;
+	font-family: 'Segoe UI', Arial;
 	float: right;
 	margin-right: 20%;
 }
@@ -183,7 +192,7 @@ li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Segoe UI', Arial;
 	color: black;
 }
 
@@ -340,19 +349,30 @@ li a.active {
 	bottom: 0;
 	left: 0;
 	padding: 1rem;
-	background-color: #efefef;
+	background: #484848;
 	text-align: center;
 	z-index: 2;
 }
 
-#footer > a{
-	margin: 1%;
-	color: black;
-	text-decoration: none;
+#footer > div{
+	margin-left: auto;
+    margin-right: auto;
+	width: 50%;
 }
 
-#footer > a:hover{;
-	color: blue;
+#footer > div > a{
+	margin: 1%;
+	text-decoration: none;
+	color: #F4B400;
+}
+
+#footer > div > a:hover{
+	color: yellow;
+}
+
+#footerText{
+	color: yellow;
+	text-align: left;
 }
 
 /* Other Pages */
