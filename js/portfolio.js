@@ -1,10 +1,19 @@
 var bodyEl = document.getElementsByTagName("BODY")[0];
+var colors = ['#637BAA', '#C67069'];
+var random_color = colors[Math.floor(Math.random() * colors.length)];
+document.body.style.backgroundColor = random_color;
+var popupWindow = document.getElementsByClassName("popupWindow");
 
 function openPopup(projectName){
 	window.scrollTo(0, 0);
 	addClass(bodyEl, 'stopScroll');
 	document.getElementById(projectName).style.visibility = "visible";
 	stopVideo();
+	random_color = colors[Math.floor(Math.random() * colors.length)];
+	
+	for (var i = 0; i < popupWindow.length; i++) {
+		popupWindow[i].style.backgroundColor = random_color;
+	}
 }
 
 function closePopup(){

@@ -144,7 +144,7 @@ body {
 	font-size: 120%;
 	font-weight: bold;
 	font-family: 'Roboto', sans-serif;
-	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 	-moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer */
 	-khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
@@ -194,6 +194,7 @@ li a {
 	text-decoration: none;
 	font-family: 'Segoe UI', Arial;
 	color: black;
+	font-weight: bold;
 }
 
 li a:hover:not(.active) {
@@ -262,7 +263,7 @@ li a.active {
 	cursor: pointer;
 }
 
-#popupWindow{
+.popupWindow{
 	position: absolute;
 	top: 0px;
     right: 0;   
@@ -271,11 +272,12 @@ li a.active {
     margin:auto;
 	width: 50%;
 	overflow: auto;
-	color: white;
+	color: black;
 	z-index: 5;
 	-webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	background-color: #637BAA;
 }
 
 #popupContent{
@@ -286,7 +288,6 @@ li a.active {
 
 #popupTop{
 	display: table-row;
-	background: #FFBA00;
 	height: 10%;
 	overflow: auto;
 	text-align: center;
@@ -321,7 +322,6 @@ li a.active {
 	text-align: justified;
 	font-family: 'Roboto', sans-serif;
 	font-size: 130%;
-	background-color: #EF9B0F;
 }
 
 #popupRight > p{
