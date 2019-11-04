@@ -424,6 +424,10 @@ li a.active {
 	width: 100%;
 }
 
+#whiteSpaceHoz{
+	height: 100px;
+}
+
 .stopScroll{
 	overflow: hidden;
 }
