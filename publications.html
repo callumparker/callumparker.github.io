@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/a802616/src/bibtex_js.js"></script>
   
   <!-- Enable media queries for old IE -->
   <!--[if lt IE 9]>
@@ -30,9 +31,14 @@
 		</ul>
 	</ul>
 	
-	<div class="pubWrapper">
-		<script src="https://bibbase.org/show?bib=callumparker.com%2Fcitations.bib&jsonp=1"></script>
-	</div>
+	<textarea id="bibtex_input" style="display:none;">
+	@book{book1,
+	  author = "Donald Knuth",
+	  title = "Concrete Mathematics"
+	}
+	</textarea>
+	
+	<div id="bibtex_display"></div>
 	<div id="whiteSpace"></div>
 	
 <div id="footer">
