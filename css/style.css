@@ -265,12 +265,13 @@ li a.active {
 
 .popupWindow{
 	position: absolute;
+	width: 100%;
+	height: 100%;
 	top: 0px;
     right: 0;   
     left: 0;
     bottom: 0;
     margin:auto;
-	width: 50%;
 	overflow: auto;
 	color: black;
 	z-index: 5;
@@ -280,14 +281,7 @@ li a.active {
 	background-color: #637BAA;
 }
 
-#popupContent{
-	width: 100%;
-	height: 100%;
-	display: table;
-}
-
 #popupTop{
-	display: table-row;
 	height: 10%;
 	overflow: auto;
 	text-align: center;
@@ -298,36 +292,33 @@ li a.active {
 }
 
 #popupLeft{
-	display: table-row;
+	display: inline-block;
+    vertical-align: top;
 	background-color: black;
 }
 
 #popupLeft > iframe{
-	width: 100%;
+	width: 50%;
 	height: 100%;
 }
 
 #popupLeft > img{
-	width: 70%;
-	margin-top: 1%;
-	margin-left: 15%;
+	width: 50%;
 }
 
 #popupRight{
-	display: table-row;
+	display: inline-block;
+    vertical-align: top;
 	z-index: 5;
-	height: 5%;
+	width: 50%;
 	overflow: auto;
-	padding: 5%;
 	text-align: justified;
 	font-family: 'Roboto', sans-serif;
 	font-size: 130%;
 }
 
 #popupRight > p{
-	margin-right: 5%;
-	margin-left: 5%;
-	margin-bottom: 5%;
+
 }
 
 #popupClose{
