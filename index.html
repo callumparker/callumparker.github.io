@@ -1,269 +1,87 @@
-<!DOCTYPE HTML> 
-<html lang="en-US"> 
-<head> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">   
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Callum Parker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="theme-color" content="#FFBA00" />
-	<title>Callum Parker</title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
-	<link rel="stylesheet" href="./css/font-awesome/css/all.css">
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="bootstrap/bootstrap.min.css"
+    />
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./font-awesome/css/all.css">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+	
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-  
-  <!-- Enable media queries for old IE -->
-  <!--[if lt IE 9]>
-     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-  <![endif]-->
-  
-</head>
-<body>
-	<!-- PROJECT POPUPS -->
+  </head>
+  <body>
 
-	<!-- Pop-spot Project -->
-	<div id="popspot" class="popupBackground">
-		<div class="bg" onclick="closePopup()"></div>
-		<div class="popupWindow">
-				<div id="popupTop">
-					<i id="popupClose" class="fa fa-times fa-5x" aria-hidden="true" onclick="closePopup()"></i>
-				</div>
-				<div id="popupLeft">
-					<iframe class="projectVideo" src="https://www.youtube.com/embed/-lWRHBXipa0?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="popupRight">
-					<br />
-					<p>
-						Pop-Spot was a community engagement popup around the theme of transport. We placed it in the University of Sydney for 6 days.<br /><br />
-						This popup consisted of a variety of technologies: drawing robot (smiley face or sad face based on yes or no tweet), live and personalised transit timetable, selfie booth, chalkboard, and chalk paint on the pavement.
-					</p>
-				</div>
-		</div>
-	</div>
-	
-	<!-- AR Tree Project -->
-	<div id="tree_game" class="popupBackground">
-		<div class="bg" onclick="closePopup()"></div>
-		<div class="popupWindow">
-			<div id="popupContent">
-				<div id="popupTop">
-					<i id="popupClose" class="fa fa-times fa-5x" aria-hidden="true" onclick="closePopup()"></i>
-				</div>
-				<div id="popupLeft">
-					<img src="./img/tree_game.jpg"></img>
-				</div>
-				<div id="popupRight">
-					<br />
-					<p>
-						This game was developed in the Unity Game Engine with the Vuforia library for Android. This was a component for a community engagement popup for Ausgrid (a local power company) to raise awareness about tree trimming.
-						<br /><br />
-						I created a video see-through head mounted display (or in this case tripod mounted display) which people could look through to see augmented content. The white boxes as shown in the photo are AR markers, one for the 3D tree and the other for the 3D powerlines. If they are too close together then the tree catches fire.
-						<br /><br />
-						The idea is that one person would look through the headset and the other would move the marker boxes under the guidance of the person using the headset.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- AR Public Screen Project -->
-	<div id="arscreen" class="popupBackground">
-		<div class="bg" onclick="closePopup()"></div>
-		<div class="popupWindow">
-			<div id="popupContent">
-				<div id="popupTop">
-					<i id="popupClose" class="fa fa-times fa-5x" aria-hidden="true" onclick="closePopup()"></i>
-				</div>
-				<div id="popupLeft">
-					<iframe class="projectVideo" src="https://www.youtube.com/embed/2isJYOcqF4c?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="popupRight">
-					<br />
-					<p>
-						The goal of this work was to evaluate the effectiveness of mobile augmented reality (MAR) at enabling personalised interactions with public displays and whether it can address some of the challenges reviewed in the previous section.
-						<br /><br />
-						To tackle this, we created a prototype consisting of a MAR app and a public display application, in the form of a public bulletin board. The MAR app featured two modes: AR overlay and remote control.
-						<br /><br />
-						Please read the research paper for more information, which can be found <a href="https://www.researchgate.net/publication/303907528_Design_implications_for_interacting_with_personalised_public_displays_through_mobile_augmented_reality">here</a>.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Video See-through HMD Project -->
-	<div id="hmdar" class="popupBackground">
-		<div class="bg" onclick="closePopup()"></div>
-		<div class="popupWindow">
-			<div id="popupContent">
-				<div id="popupTop">
-					<i id="popupClose" class="fa fa-times fa-5x" aria-hidden="true" onclick="closePopup()"></i>
-				</div>
-				<div id="popupLeft">
-					<iframe class="projectVideo" src="https://www.youtube.com/embed/0-6C-nNqeR4?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="popupRight">
-					<br />
-					<p>
-						Public displays are widely used for displaying messages to large groups of people. The proliferation of public displays has also lead to them being ignored either through people assuming the content is irrelevant to them or they get lost among other objects in the public space vying for attention. Adapting or personalising the content could make the displays more relevant. However, inherit privacy issues are then created. We present an initial prototype that demonstrates the concept of interacting with public displays with video see-through augmented reality and its potential for individuals to have private and unique experiences with public displays.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Tweet Wall Project -->
-	<div id="tweetwall" class="popupBackground">
-		<div class="bg" onclick="closePopup()"></div>
-		<div class="popupWindow">
-			<div id="popupContent">
-				<div id="popupTop">
-					<i id="popupClose" class="fa fa-times fa-5x" aria-hidden="true" onclick="closePopup()"></i>
-				</div>
-				<div id="popupLeft">
-					<iframe class="projectVideo" src="https://www.youtube.com/embed/GDOFbi0DttM?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="popupRight">
-					<br />
-					<p>
-						We designed and implemented a public display application that allows people to navigate between Twitter feeds and to find details about particular tweets. The application supports selection and navigation through point-and-dwell and push and grab-and-pull. A within-subject evaluation with 10 participants found that although point-and-dwell was perceived to be more accurate, push was preferred for selecting items and grab-and-pull was preferred for navigation. Based on our findings we derive recommendations for designing gesture-based information displays.
-						<br /><br />
-						The research paper can be found <a href="https://www.researchgate.net/publication/286451730_To_Dwell_or_Not_to_Dwell_An_Evaluation_of_Mid-Air_Gestures_for_Large_Information_Displays">here</a>.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- MolyPoly Project -->
-	<div id="molypoly" class="popupBackground">
-		<div class="bg" onclick="closePopup()"></div>
-		<div class="popupWindow">
-			<div id="popupContent">
-				<div id="popupTop">
-					<i id="popupClose" class="fa fa-times fa-5x" aria-hidden="true" onclick="closePopup()"></i>
-				</div>
-				<div id="popupLeft">
-					<iframe class="projectVideo" src="https://www.youtube.com/embed/RrBbsPxJ5aU?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="popupRight">
-					<br /><br />
-					<p>
-						What is MolyPoly?
-						<br /><br />
-						It is a 3D molecule construction simulation to help students grasp the concepts of chemistry easily through immersive, natural interaction with 3D molecules.
-						<br /><br />
-						The system can be interacted with by performing hand gestures which are recognised by the Microsoft Kinect. The goal is to build the required molecule by picking up and attaching molecules to the structure.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- DollAR Project -->
-	<div id="dollar" class="popupBackground">
-		<div class="bg" onclick="closePopup()"></div>
-		<div class="popupWindow">
-			<div id="popupContent">
-				<div id="popupTop">
-					<i id="popupClose" class="fa fa-times fa-5x" aria-hidden="true" onclick="closePopup()"></i>
-				</div>
-				<div id="popupLeft">
-					<iframe class="projectVideo" src="https://www.youtube.com/embed/lnDgWeGFW7U?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="popupRight">
-					<br /><br />
-					<p>
-						DollAR is an internship project that was conducted during the summer break of my computing degree (Dec 2012 – Feb 2013). It is an application that allows you to interact with your Barbie doll in an exciting and intuitive way through the use of an iPad and Augmented Reality Technology. The user can change Barbie’s clothing without needing to make Barbie physically wear the clothes (which is time consuming!).
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<ul id="navBar">
-		<ul class="leftNav">
-			<li><h1 class="myName">callum parker.</h1></li>
-		</ul>
-		<ul class="rightNav">
-			<li><a href="./publications.html">publications</a></li>
-			<li><a class="active" href="./index.html">work</a></li>
-			<li><a href="./about.html">bio</a></li>
-		</ul>
-	</ul>
-	
-	<div class="wrapper">
-		<!-- Define all of the tiles: -->
-		<div class="tile">
-		  <div class="tileInner" onclick="openPopup('popspot')" style="background-image: url('./img/popspot.jpg');">
-			<div class="projectTitle">
-				<p>Pop-Spot</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-		<div class="tile">
-		  <div class="tileInner" onclick="openPopup('tree_game')" style="background-image: url('./img/tree_game.jpg');">
-			<div class="projectTitle">
-				<p>AR Tree Game</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-		<div class="tile">
-		  <div class="tileInner" onclick="openPopup('arscreen')" style="background-image: url('./img/ar_tile.jpg');">
-			<div class="projectTitle">
-				<p>AR Public Screen</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-		<div class="tile">
-		  <div class="tileInner" onclick="openPopup('hmdar')" style="background-image: url('./img/public_display_HMD.jpg');">
-			<div class="projectTitle">
-				<p>Video See-through HMD</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-		<div class="tile">
-		  <div class="tileInner" style="background-image: url('./img/selfiebooth.jpg');">
-			<div class="projectTitle">
-				<p>Selfie Booth (WIP)</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-		<div class="tile">
-		  <div class="tileInner" onclick="openPopup('tweetwall')" style="background-image: url('./img/tweet-wall.jpg');">
-			<div class="projectTitle">
-				<p>Tweet-wall</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-		<div class="tile">
-		  <div class="tileInner" onclick="openPopup('molypoly')" style="background-image: url('./img/molypoly.jpg');">
-			<div class="projectTitle">
-				<p>MolyPoly</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-		<div class="tile">
-		  <div class="tileInner" onclick="openPopup('dollar')" style="background-image: url('./img/dollar.jpg');">
-			<div class="projectTitle">
-				<p>DollAR</p>
-			</div>
-			<div class="desc"></div>
-		  </div>
-		</div>
-	</div>
-	<div id="whiteSpace"></div>
-	
-	<div id="footer">
-		<div>
-			<a href="https://au.linkedin.com/in/callum-parker-40259884">
+    <nav class="navbar">
+    <div class="container text-center">
+        <div id="navbar" class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="pubs.html">Publications</a></li>
+                <li><a href="teaching.html">Teaching & Supervision</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+      <h1>Callum Parker <SMALL>BComp, PhD</SMALL></h1>
+      <div class="typewriter">
+          <div class="typewriter-text">Associate Lecturer in Interaction Design.</div>
+      </div>
+      
+      <p>
+        Hi, I'm Callum! I research Human-Computer Interaction (HCI), with a specific focus on Augmented City Interfaces (check the "Projects" tab for examples). As of February 2019, I am an Assistant Lecturer (Assistant Professor for those outside of Aus) in Interaction Design at the University of Sydney. In 2013, I received a Bachelor of Computing majoring in Human Inteface Technology at the University of Tasmania. In 2019, I received a PhD from the University of Sydney in Australia. I was supervised by Martin Tomitsch and Judy Kay.
+      </p>
+      
+      <br />
+      
+      <h3>
+        Research Interests
+      </h3>
+      <p>
+        I work across a range of topics within HCI and Augmented City Interfaces. I'm particularly active in the fields of pervasive displays, {augmented, virtual, and mixed} realities, smart cities, and media architecture.
+      </p>
+      
+      <br />
+      
+      <h3>
+        Updates
+      </h3>
+	  
+		<table class="updates">
+			<tr>
+				<td class="dateField">February 2020</td>
+				<td>Late breaking work paper accepted to CHI 2020: "<i>Designing Exocentric Pedestrian Navigation for AR Head Mounted Displays</i>".</td>
+			</tr>
+			<tr>
+				<td class="dateField">December 2019</td>
+				<td>Paper accepted to CHI 2020: "<i>Foundations for Designing Public Interactive Displays that Provide Value to Users</i>".</td>
+			</tr>
+			<tr>
+				<td class="dateField">December 2019</td>
+				<td>Visited the Future Lab at Tsinghua University to participate and help run a workshop on selfie taking for the elderly.</td>
+			</tr>
+		</table>
+	  
+	  
+	  
+	  
+	  <!-- Buffer between content and footer -->
+	  <div class="whiteSpace"></div>
+	  
+		<div class="footer">
+			<div class="footer_contents">
+						<a href="https://au.linkedin.com/in/callum-parker-40259884">
 				<span class="fab fa-linkedin-in fa-3x" aria-hidden="true"></span>
 			</a>
 			<a href="https://twitter.com/parkcal90">
@@ -287,10 +105,12 @@
 			<a href="https://www.researchgate.net/profile/Callum_Parker">
 				<span class="fab fa-researchgate fa-3x"></span>
 			</a>
+			</div>
 		</div>
-	</div>
-	
+	  
+    
+    </div>
+    
 
-	<script src="./js/portfolio.js"></script>
-</body> 
+  </body>
 </html>
