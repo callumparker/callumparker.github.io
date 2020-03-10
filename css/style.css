@@ -1,6 +1,4 @@
-
-/* CSS files add styling rules to your content */
-
+/* General */
 body {
   font-family: monospace, helvetica, arial, sans-serif;
   margin: 2em;
@@ -17,8 +15,7 @@ h1 {
 }
 
 
-
-
+/* Navbar related */
 .navbar .navbar-header,
 .navbar-collapse {
     float: none;
@@ -35,16 +32,20 @@ h1 {
     }
 }
 
-li a:hover:not(.active) {
+.navbar li a:hover:not(.active) {
 	background-color: #FFF;
 }
 
-li a.active {
+.navbar li a.active {
 	background-color: #EEEEEE;
 }
 
+.navbar li a {
+    font-size: 1.3em !important;
+}
 
 
+/* Typewriter subtitle animation */
 .typewriter {
   font-family: monospace, Courier;
 	display: inline-block;
@@ -100,7 +101,6 @@ li a.active {
 
 
 /* Footer */
-
 .footer {
 	position: fixed;
 	right: 0;
@@ -133,17 +133,43 @@ li a.active {
 	text-align: left;
 }
 
+.whiteSpace{
+	width: 100%;
+	height: 100px;
+}
 
 
-
+/* Updates table */
 .updates{border: none;}
 .updates td{padding-top: 10px; padding-right: 10px; overflow:hidden;word-break:normal;}
 .updates th{font-weight:normal;padding:10px 5px;overflow:hidden;word-break:normal;}
 .dateField{text-align: right; font-weight: bold;}
 
-.whiteSpace{
-	width: 100%;
-	height: 100px;
+
+/* Project table */
+.imageField {
+	width: 40%;
+	
+
 }
+
+.content {
+  display: flex;
+}
+
+.content img {
+  margin-right: 20px;
+  display: block;
+}
+
+.content h3,
+.content p {margin: 0;}
+
+@media (max-width: 1000px) {
+	.content {
+	  display: block;
+	}
+}
+
 
 
