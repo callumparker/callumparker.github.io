@@ -16,92 +16,176 @@
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
 	
+	<!-- Bibtex -->
+	<script type="text/javascript" src="js/bibtex.js"></script>
+	<bibtex src="js/myPubs.bib"></bibtex>
+	
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+	
+	
+	
+	
+	    <script>
+		$(function() {
+		  $("#Fontselector").on("change",function() {
+		    var font = $("#Fontselector option:selected").text();
+		    console.log(font);
+		
+		    $('.title.fonters').each(function() {
+		    	$(this).css("font-family",font);
+		    });
+		  }); 
+		});
+		function reset() {
+			$("select").each(function () {
+			  localStorage.setItem($(this).attr("id"),"");
+			  $(this).val("");
+			}); 
+			$("#searchbar").val("");
+			$("#searchbar").trigger('change');
+		}
+    </script>
+    
+    <style>
+	    bibtex { display: none; }
+	    .searchbar { margin-left:0px;}
+	    #bibtex_errors { margin-top:10px; color: red;}
+	    h1.header {margin-left:8px;}
+	    h1.YEAR { font-size: 17px; font-weight: bold; display: inline; margin-left:8px;}
+    </style>
   </head>
   <body>
 
-    <nav class="navbar">
-    <div class="container text-center">
-        <div id="navbar" class="navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a class="active" href="pubs.html">Publications</a></li>
-                <li><a href="teaching.html">Teaching & Supervision</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+	<nav class="navbar">
+		<div class="container text-center">
+			<div id="navbar" class="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a class="active" href="pubs.html">Publications</a></li>
+					<li><a href="teaching.html">Teaching & Supervision</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-    <div class="container">
-      <h1>Callum Parker <SMALL>BComp, PhD</SMALL></h1>
-      <div class="typewriter">
-          <div class="typewriter-text-noanim">Associate Lecturer in Interaction Design.</div>
+	<div class="container">
+		<h1>Callum Parker <SMALL>BComp, PhD</SMALL></h1>
+		<div class="typewriter">
+			<div class="typewriter-text-noanim">Associate Lecturer in Interaction Design.</div>
+		</div>
+		  
+		<h3>
+			<strong>Publications</strong>
+		</h3>
+		  
+		<br />
+		  
+		<div class="container-fluid">
+	<div class="searchbar">
+		<div style="float:left;">
+			<button type="button" class="btn btn-default" onclick="reset()">Reset</button>
+		</div>
+		<div style="float:left;">
+			<input type="text" class="bibtex_search form-control" id="searchbar" placeholder="Search publications">
+			<span class="help-block">Example: displays 2015 (finds the intersection of the two terms)</span>
+		</div>
+	</div>
+</div>
+
+<div class="bibtex_structure">
+  <div class="group year" extra="DESC number">
+  	  <a href="#top" style="display: inline"><em>(Top of the page)</em></a>
+  	  <div style="padding-bottom:10px;"></div>
+  	  <div class="sort journal" extra="DESC string">
+      	<div class="templates"></div>
       </div>
-      
-      <h3>
-        Projects
-      </h3>
-      <p>
-        I work across a range of topics within HCI and Augmented City Interfaces. I'm particularly active in the fields of pervasive displays, {augmented, virtual, and mixed} realities, smart cities, and media architecture.
-      </p>
-      
-      <br />
-      
-      <h3>
-        Updates
-      </h3>
-	  
-		<table class="updates">
-			<tr>
-				<td class="dateField">February 2020</td>
-				<td>Late breaking work paper accepted to CHI 2020: "<i>Designing Exocentric Pedestrian Navigation for AR Head Mounted Displays</i>".</td>
-			</tr>
-			<tr>
-				<td class="dateField">December 2019</td>
-				<td>Paper accepted to CHI 2020: "<i>Foundations for Designing Public Interactive Displays that Provide Value to Users</i>".</td>
-			</tr>
-			<tr>
-				<td class="dateField">December 2019</td>
-				<td>Visited the Future Lab at Tsinghua University to participate and help run a workshop on selfie taking for the elderly.</td>
-			</tr>
-		</table>
-	  
-	  
-	  
-	  
-	  <!-- Buffer between content and footer -->
-	  <div class="whiteSpace"></div>
-	  
+  </div>
+</div>
+
+<div id="bibtex_display">
+
+  <div class="if bibtex_template" style="display: none;">
+    <ul> <li>
+      <span class="if title">
+        <a target="_blank" class="bibtexVar" href="papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
+            <span style="text-decoration: underline;" class="title"></span>,
+        </a>
+      </span>
+      <span class="if title">
+            <span class="title"></span>,
+      </span>
+      <div class="if author">
+        <span class="author"></span>
+      </div>
+      <div>
+        <span class="if journal"><em><span class="journal"></span></em>,</span>
+        <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+        <span class="if editor"><span class="editor"></span> (editors),</span>
+        <span class="if publisher"><em><span class="publisher"></span></em>,</span>
+        <span class="if institution"><span class="institution"></span>,</span>
+        <span class="if address"><span class="address"></span>,</span>
+        <span class="if volume"><span class="volume"></span>,</span>
+        <span class="if journal number">(<span class="number"></span>),</span>
+        <span class="if pages"> pages <span class="pages"></span>,</span>
+        <span class="if month"><span class="month"></span>,</span>
+        <span class="if year"><span class="year"></span>.</span>
+        <span class="if note"><span class="note"></span>.</span>
+        <a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+		  [bib]
+		</a>
+      </div>
+      <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+		  <div class="well">
+		    <pre><span class="bibtexraw noread"></span></pre>
+		  </div>
+	  </div>
+      <div style="display:none"><span class="bibtextype"></span></div>
+      <div style="display:none"><span class="if topic"><span class="topic"></span></span></div>
+    </li></ul>
+  </div>
+  
+</div>
+		  
+		  
+		  
+		  
+		  
+		  
+		<!-- Buffer between content and footer -->
+		<div class="whiteSpace"></div>
+
 		<div class="footer">
 			<div class="footer_contents">
-				<a href="mailto:callum.parker@sydney.edu.au">
+				<a target="_blank" href="mailto:callum.parker@sydney.edu.au">
 					<span class="fas fa-envelope fa-3x" aria-hidden="true"></span>
 				</a>
-				<a href="https://au.linkedin.com/in/callum-parker-40259884">
+				<a target="_blank" href="https://au.linkedin.com/in/callum-parker-40259884">
 					<span class="fab fa-linkedin-in fa-3x" aria-hidden="true"></span>
 				</a>
-				<a href="https://www.researchgate.net/profile/Callum_Parker">
+				<a target="_blank" href="https://www.researchgate.net/profile/Callum_Parker">
 					<span class="fab fa-researchgate fa-3x"></span>
 				</a>
-				<a href="https://twitter.com/parkcal90">
+				<a target="_blank" href="https://twitter.com/parkcal90">
 					<span class="fab fa-twitter fa-3x" aria-hidden="true"></span>
 				</a>
-				<a href="https://github.com/doberuman">
+				<a target="_blank" href="https://github.com/doberuman">
 					<span class="fab fa-github-alt fa-3x" aria-hidden="true"></span>
 				</a>
-				<a href="https://www.instagram.com/parkcal90/">
+				<a target="_blank" href="https://www.instagram.com/parkcal90/">
 					<span class="fab fa-instagram fa-3x" aria-hidden="true"></span>
 				</a>
-				<a href="https://www.instagram.com/theaugmentedcity/">
+				<a target="_blank" href="https://www.instagram.com/theaugmentedcity/">
 					<span class="fab fa-instagram fa-3x" aria-hidden="true"></span>
 				</a>
-				<a href="skype:callum-p?call">
+				<a target="_blank" href="skype:callum-p?call">
 					<span class="fab fa-skype fa-3x" aria-hidden="true"></span>
 				</a>
 			</div>
 		</div>
-	  
+		
+		
+		
     
     </div>
     
