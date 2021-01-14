@@ -109,10 +109,31 @@
   <div class="if bibtex_template" style="display: none;">
     <ul> <li>
       <span class="if title">
-        <a target="_blank" class="bibtexVar" href="papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
-            <span style="text-decoration: underline;" class="title"></span>,
-        </a>
+		<div class="if url">
+			<a class="bibtexVar" extra="BIBTEXKEY">
+				<span style="text-decoration: underline; color: black;" class="title"></span>,
+			</a>
+		</div>
+		<div class="if !url">
+			<a target="_blank" class="bibtexVar" href="papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
+				<span style="text-decoration: underline;" class="title"></span>,
+			</a>
+		</div>
       </span>
+	  
+	  <div class="if url">
+	  <a  target="_blank" class="bibtexVar" href="+URL+" extra="url">
+		Access publication here
+	  </a>
+	</div>
+	<div class="if !url">
+	  <div class="if doi">
+		<a class="bibtexVar" href="http://dx.doi.org/+DOI+" extra="doi">
+		  https://dx.doi.org/<span class="doi"></span>
+		</a>
+	  </div>
+	</div>
+	  
       <div class="if author">
         <span class="author"></span>
       </div>
