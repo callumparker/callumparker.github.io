@@ -1,7 +1,0 @@
-components:
-  - title: Animation
-    name: animation
-    examples:
-      - name: Basic
-        path: basic/
-        description: Basic animation example.

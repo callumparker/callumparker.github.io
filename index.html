@@ -1,98 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Callum Parker</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="theme-color" content="#FFBA00" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
-      href="bootstrap/bootstrap.min.css"
     />
-    <script src="js/jquery.min.js"></script>
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./font-awesome/css/all.css">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
 	
-	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+	
+    <title>Callum Parker</title>
   </head>
-  <body>
+  <body class="light" id="top">
+    <header class="header center">
 
-    <nav class="navbar">
-		<div class="container text-center">
-			<div id="navbar" class="navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li><a class="active" href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="pubs.html">Publications</a></li>
-					<li><a href="teaching.html">Teaching & Supervision</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+      <nav class="nav center navbar-expand">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Resume</a>
+          </li>
+		  <li class="nav__list-item">
+            <a class="link link--nav" href="./pubs.html">Publications</a>
+          </li>
+        </ul>
 
-    <div class="container">
-      <h1>Callum Parker <SMALL>BComp, PhD</SMALL></h1>
-      <div class="typewriter">
-          <div class="typewriter-text">Lecturer in Interaction Design.</div>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+		<img id="my_img" src="img/resized1.jpg" alt="Avatar">
+        <h1><span class="about__name">Callum Parker</span></h1>
+        <h2 class="about__role">Lecturer in Interaction Design</h2>
+        <p class="about__desc">
+          Hi, I’m Callum! I am a Lecturer in Interaction Design at the Urban Interfaces Lab in the University of Sydney’s School of Architecture, Design and Planning. My research seeks to gain new understanding of interactive digital city interfaces and their place within urban environments, contributing towards the broader smart city. I’m specifically focused on leveraging cutting edge technologies such as pervasive displays, {augmented, virtual, and mixed} realities, and media architecture.
+		  <br /><br />
+		  Outside of research I coordinate and teach units across the undergraduate Design Computing and postgraduate Master of Electronic Arts and Interaction Design (MIDEA) degrees, including Designing for Virtual Reality, XR Design, and Interactive Product Design Studio (a capstone project for 3rd year design students).
+        </p>
+
+        <div class="about__contact center">
+          
+		  
+		  <a
+            href="mailto:callum.parker@sydney.edu.au" target="_blank"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fas fa-envelope"></i>
+          </a>
+
+          <a
+            href="https://github.com/callumparker" target="_blank"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://au.linkedin.com/in/callum-parker-40259884" target="_blank"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
+		  
+		  <a
+            href="https://www.researchgate.net/profile/Callum_Parker" target="_blank"
+            aria-label="researchgate"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-researchgate"></i>
+          </a>
+		  
+		  <a
+            href="https://twitter.com/thecallumparker" target="_blank"
+            aria-label="twitter"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-twitter"></i>
+          </a>
+		  
+		  <a
+            href="https://www.instagram.com/parkcal90/" target="_blank"
+            aria-label="instagram"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-instagram"></i>
+          </a>
+		  
+		  <a
+            href="https://www.instagram.com/theaugmentedcity/" target="_blank"
+            aria-label="instagram"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-instagram"></i>
+          </a>
+		  
+		  
+        </div>
       </div>
-      
-      <p>
-        Hi, I’m Callum! I am a Lecturer in Interaction Design at the Urban Interfaces Lab in the University of Sydney’s School of Architecture, Design and Planning. My research seeks to gain new understanding of interactive digital city interfaces and their place within urban environments, contributing towards the broader smart city. I’m specifically focused on leveraging cutting edge technologies such as pervasive displays, {augmented, virtual, and mixed} realities, and media architecture. Outside of research I coordinate and teach units across the undergraduate Design Computing and postgraduate Master of Electronic Arts and Interaction Design (MIDEA) degrees, including Designing for Virtual Reality, XR Design, and Interactive Product Design Studio (a capstone project for 3rd year design students). In 2013, I received a Bachelor of Computing majoring in Human Interface Technology at the University of Tasmania. In 2019, I received a PhD from the University of Sydney in Australia. I was supervised by Prof. Martin Tomitsch and Prof. Judy Kay.
-      </p>
-      
-      <br />
-      
-      <h3>
-        Research Interests
-      </h3>
-      <p>
-        I work across a range of topics within HCI and Digital City Interfaces with a particular focus on pervasive displays, {augmented, virtual, and mixed} realities, smart cities, and media architecture.
-      </p>
-      
-      <br />
-	  
-	  
-	  
-	  
-		<!-- Buffer between content and footer -->
-		<div class="whiteSpace"></div>
 
-		<div class="footer">
-			<div class="footer_contents">
-				<a target="_blank" href="mailto:callum.parker@sydney.edu.au">
-					<span class="fas fa-envelope fa-3x" aria-hidden="true"></span>
-				</a>
-				<a target="_blank" href="https://au.linkedin.com/in/callum-parker-40259884">
-					<span class="fab fa-linkedin-in fa-3x" aria-hidden="true"></span>
-				</a>
-				<a target="_blank" href="https://www.researchgate.net/profile/Callum_Parker">
-					<span class="fab fa-researchgate fa-3x"></span>
-				</a>
-				<a target="_blank" href="https://twitter.com/thecallumparker">
-					<span class="fab fa-twitter fa-3x" aria-hidden="true"></span>
-				</a>
-				<a target="_blank" href="https://github.com/callumparker">
-					<span class="fab fa-github-alt fa-3x" aria-hidden="true"></span>
-				</a>
-				<a target="_blank" href="https://www.instagram.com/parkcal90/">
-					<span class="fab fa-instagram fa-3x" aria-hidden="true"></span>
-				</a>
-				<a target="_blank" href="https://www.instagram.com/theaugmentedcity/">
-					<span class="fab fa-instagram fa-3x" aria-hidden="true"></span>
-				</a>
-				<a target="_blank" href="skype:callum-p?call">
-					<span class="fab fa-skype fa-3x" aria-hidden="true"></span>
-				</a>
-			</div>
-		</div>
-	  
-    
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+		
+		
+		<!-- BDB -->
+          <div class="project">
+            <h3>Big Data Bugs</h3>
+            <p class="project__description">
+				Smartphone-augmented reality (AR) application (app) for a local museum exhibit to display visualisations of geo-located data for entomology specimens. Visitors to the museum can spatially visualise insect specimens in-situ and view more detailed information through their own devices.
+			</p>
+			<br />
+			<p>
+				<b>Read more:</b> 
+				<a target="_blank" href="papers/globa2021big.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+          </div>
+		  
+		  <!-- Snowballz -->
+		  <div class="project">
+            <h3>Snowballz</h3>
+            <p class="project__description">
+				Virtual reality games, even though they were not explicitly designed for exercise, <a class="inTextLink" href="https://www.sydney.edu.au/news-opinion/news/2020/03/03/it-can-be-all-fun-and-games.html">have the potential to provide enough exercise to achieve recommended levels of activity for a day while keeping people motivated</a>. However, there is a risk of overexertion. Therefore, we designed and developed a virtual reality exergame called Snowballz, which utilises a user model and dynamic difficulty adjustment to deliver an ever changing level intensity according to the player’s energy and performance.
+			</p>
+			<br />
+			<p>
+				<b>Read more:</b> 
+				<a target="_blank" href="papers/yoo2018adapting.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+				<a target="_blank" href="papers/kay2017designing.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+			<p><b>Media:</b>
+				<a target="_blank" href="https://youtu.be/X0fRr9TeUvM" class="link link--icon">
+				<span class="fab fa-youtube fa-1x" aria-hidden="true"></span></a>
+				
+				<a target="_blank" href="https://youtu.be/DEag_2-vISo" class="link link--icon">
+				<span class="fab fa-youtube fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+          </div>
+
+			<!-- Pop-spot -->
+		  <div class="project">
+            <h3>Pop-spot</h3>
+            <p class="project__description">
+				We designed and developed an engagement popup to encourage people to stop and vote, provide feedback, and express their opinions about transport infrastructure on and around our University through a collection of interactive modules, including a touchscreen transit information screen, a selfie voting app (vote with the transport option you took to university), a chalkboard, and a chalk drawing robot (tallying the votes from live tweets to our popup's Twitter hashtag).
+			</p>
+			<br />
+			<p>
+				<b>Read more:</b> 
+				<a target="_blank" href="papers/fredericks2018blending.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+			<p><b>Media:</b> <a target="_blank" href="https://www.youtube.com/watch?v=-lWRHBXipa0&feature=emb_logo" class="link link--icon">
+					<span class="fab fa-youtube fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+          </div>
+		  
+		  <!-- AR Tree Trimming Awareness Game -->
+		  <div class="project">
+            <h3>AR Tree Trimming Awareness Game</h3>
+            <p class="project__description">
+				This game was a component for a community engagement popup for Ausgrid (a local power company) to raise awareness about tree trimming. I created a video see-through augmented reality (AR) headset mounted on a tripod, which people could look through to see AR content. The white boxes as shown in the photo are AR markers, one for the 3D tree and the other for the 3D powerlines. If they are too close together then the tree catches fire.
+			</p>
+			<br />
+			<p>
+				<b>Read more:</b> 
+				<a target="_blank" href="papers/fredericks2018blending.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+          </div>
+		  
+		  <!-- HIVE - A Public Display with Augmented Reality Assisted Personalisation -->
+		  <div class="project">
+            <h3>AR Assisted Personalisation</h3>
+            <p class="project__description">
+				Users could engage with the content directly on-screen or through a custom developed smartphone augmented reality (AR) app. The app had two distinct features, overlay and remote control. The overlay allowed users to see personalised content overlaid on the display, based on a user profile containing user preferences stored in the app. The remote control feature enabled users to control the display by performing swipe gestures on the display through their smartphone's camera feed.
+			</p>
+			<br />
+			<p>
+				<b>Read more:</b> 
+				<a target="_blank" href="papers/parker2016design.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+			<p><b>Media:</b> <a target="_blank" href="https://www.youtube.com/watch?v=n92BeqjFs6A" class="link link--icon">
+					<span class="fab fa-youtube fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+          </div>
+		  
+		  <!-- Tweet Wall -->
+		  <div class="project">
+            <h3>Tweet Wall</h3>
+            <p class="project__description">
+					We designed and implemented a public display application that allows people to navigate between Twitter feeds and to find details about particular tweets. The application supports selection and navigation through point-and-dwell and push and grab-and-pull. A within-subject evaluation with 10 participants found that although point-and-dwell was perceived to be more accurate, push was preferred for selecting items and grab-and-pull was preferred for navigation.
+			</p>
+			<br />
+			<p>
+				<b>Read more:</b> 
+				<a target="_blank" href="papers/yoo2015dwell.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+			<p><b>Media:</b> <a target="_blank" href="https://youtu.be/GDOFbi0DttM" class="link link--icon">
+					<span class="fab fa-youtube fa-1x" aria-hidden="true"></span></a>
+			</p>
+
+			<p><b>Source code:</b> <a href="https://github.com" aria-label="source code" class="link link--icon">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a></p>
+			
+          </div>
+		  
+		  <!-- Molypoly -->
+		  <div class="project">
+            <h3>Molypoly</h3>
+            <p class="project__description">
+				MolyPoly is a 3D molecule construction simulation to help students grasp the concepts of chemistry easily through immersion and natural interaction with 3D molecules. It was designed to augment the teaching of organic chemistry with enhanced natural interaction and 3D visualisation techniques. The results from a user study with first year chemistry students demonstrated that students can achieve similar learning outcomes to those who study chemistry traditionally at the end of the four class sessions.
+			</p>
+			<br />
+			<p>
+				<b>Read more:</b> 
+				<a target="_blank" href="papers/yoo2013molypoly.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+				<a target="_blank" href="papers/chinthammit2013molypoly.pdf" class="link link--icon"><span class="fas fa-book-open fa-1x" aria-hidden="true"></span></a>
+			</p>
+			
+			<p><b>Media:</b> <a target="_blank" href="https://youtu.be/RrBbsPxJ5aU" class="link link--icon">
+					<span class="fab fa-youtube fa-1x" aria-hidden="true"></span></a>
+			</p>
+
+			<p><b>Source code:</b> <a href="https://github.com" aria-label="source code" class="link link--icon">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a></p>
+			
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">XR (AR, VR, MR) Design and Development</li>
+          <li class="skills__list-item btn btn--plain">Mixed Methods Research</li>
+          <li class="skills__list-item btn btn--plain">Interaction Design</li>
+          <li class="skills__list-item btn btn--plain">Design Thinking</li>
+          <li class="skills__list-item btn btn--plain">Lab & Field Studies</li>
+          <li class="skills__list-item btn btn--plain">Prototyping</li>
+          <li class="skills__list-item btn btn--plain">Human Computer Interaction</li>
+		  <li class="skills__list-item btn btn--plain">Unity Game Engine</li>
+        </ul>
+      </section>
+
+      <!-- Resume -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Resume</h2>
+        <a href="./Callum_CV.pdf" target="_blank">
+          <span class="btn btn--outline">open</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+
+    <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
     </div>
-    
+    </div>
 
+    <script src="./script.js"></script>
   </body>
 </html>
