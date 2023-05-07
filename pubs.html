@@ -15,9 +15,11 @@
       crossorigin="anonymous"
     ></script>
 	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css" />
 	
 	<!-- Bibtex -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bibtex.js"></script>
 	<bibtex src="js/myPubs.bib"></bibtex>
 
@@ -41,19 +43,10 @@
 			$("#searchbar").trigger('change');
 		}
     </script>
-    
-    <style>
-		body { padding-left: 5em; padding-right: 5em; }
-	    bibtex { display: none; }
-	    .searchbar { margin-left:0px;}
-	    #bibtex_errors { margin-top:10px; color: red;}
-	    h1.header {margin-left:8px;}
-	    h1.YEAR { font-size: 17px; font-weight: bold; display: inline; margin-left:8px;}
-    </style>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 	
-    <title>Callum Parker</title>
+    <title>Callum Parker - Human-Computer Interaction Researcher and Educator</title>
   </head>
   <body class="light" id="top">
     <header class="header center">
@@ -81,7 +74,7 @@
 
 		<br />
 		<h3>
-			<strong>Publications (Under construction..)</strong>
+			<strong>Publications</strong>
 		</h3>
 		  
 		<br />
@@ -117,8 +110,8 @@
     <ul> <li>
       <span class="if title">
 		<div class="if url">
-			<a class="bibtexVar" extra="BIBTEXKEY">
-				<span style="text-decoration: underline; color: black;" class="title"></span>,
+			<a target="_blank" class="bibtexVar" href="+URL+" extra="url">
+				<span style="text-decoration: underline;" class="title"></span>,
 			</a>
 		</div>
 		<div class="if !url">
@@ -128,11 +121,7 @@
 		</div>
       </span>
 	  
-	  <div class="if url">
-	  <a  target="_blank" class="bibtexVar" href="+URL+" extra="url">
-		Access publication here
-	  </a>
-	</div>
+
 	<div class="if !url">
 	  <div class="if doi">
 		<a class="bibtexVar" href="http://dx.doi.org/+DOI+" extra="doi">
@@ -176,6 +165,7 @@
     
     </div>
     
-
+	<script src="./script.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
